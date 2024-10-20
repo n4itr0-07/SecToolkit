@@ -4,7 +4,13 @@
 
 *This 6-month learning plan is designed for anyone who wants to learn bug bounty hunting from scratch and aims to make money by finding vulnerabilities. The plan focuses on building the necessary technical knowledge, hands-on practice, and persistence needed to achieve your first bug.*
 
----
+---  
+<br> 
+<p align="center">
+  <b><a href="https://n4inj4.github.io/Bug-Bounty-Time-Table/">Live Page Link🔗</a></b>
+</p>
+<br>  
+    
 
 ## Phase 1: Fundamentals (1-2 Months)
 
