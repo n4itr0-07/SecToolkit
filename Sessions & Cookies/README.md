@@ -184,7 +184,10 @@ http.cookie || http.set_cookie
    - Implement mechanisms to revoke and monitor active sessions for suspicious behavior.
 
 ---
-
+### Useful Links🔗
+- [Using Burp to Hack Cookies and Manipulate Sessions](https://portswigger.net/support/using-burp-to-hack-cookies-and-manipulate-sessions)
+- [How session and cookies works ? Medium](https://medium.com/@hendelRamzy/how-session-and-cookies-works-640fb3f349d1)
+- [Everything You Need to Know About Session Cookies](https://securiti.ai/blog/session-cookies/)
 ### Conclusion
 
 Sessions and cookies play an essential role in maintaining the state of web applications, but they also introduce potential attack vectors for malicious users. As a bug hunter, understanding how sessions and cookies work, identifying security flaws, and exploiting those vulnerabilities for ethical purposes can help you secure web applications more effectively.
