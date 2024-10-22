@@ -63,6 +63,8 @@ Cookies are small pieces of data stored on the client side. They are sent to the
   - `HttpOnly`: Prevents JavaScript from accessing the cookie.
   - `Secure`: Ensures the cookie is sent only over HTTPS.
   - `SameSite`: Restricts the cross-origin behavior of cookies.
+ 
+![image](https://github.com/user-attachments/assets/29eac8ac-5fbe-4813-b198-7e887be2d99e)
 
 ```http
 HTTP/1.1 200 OK
