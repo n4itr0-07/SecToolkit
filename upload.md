@@ -170,30 +170,30 @@ We will be covering methods two and three in depth below.
 
 Let's assume that, once again, we have found an upload page on a website:
 
-!https://i.imgur.com/fI67jX0.png
+![up](https://i.imgur.com/fI67jX0.png)
 
 As always, we'll take a look at the source code. Here we see a basic Javascript function checking for the MIME type of uploaded files:
 
-!https://i.imgur.com/TrI5jQD.png
+![up](https://i.imgur.com/TrI5jQD.png)
 
 In this instance we can see that the filter is using a *whitelist* to exclude any MIME type that isn't `image/jpeg`.
 
 Our next step is to attempt a file upload -- as expected, if we choose a  JPEG, the function accepts it. Anything else and the upload is rejected. Having established this, let's start [Burpsuite](https://blog.tryhackme.com/setting-up-burp/) and  reload the page. We will see our own request to the site, but what we really want to see is the server's *response*, so right click on the intercepted data, scroll down to "Do Intercept", then select "Response to this request":
 
-!https://i.imgur.com/T0RjAry.png
+![up](https://i.imgur.com/T0RjAry.png)
 
 When e click the "Forward" button at the top of the window, we will then see the server's response to our request. Here we can delete, comment out, or otherwise break the Javascript function before it has a chance 
 to load:
 
-!https://i.imgur.com/ACgWLpH.png
+![up](https://i.imgur.com/ACgWLpH.png)
 
 Having deleted the function, we once again click "Forward" until the site has  finished loading, and are now free to upload any kind of file to the website:
 
-!https://i.imgur.com/5cyqjqa.png
+![up](https://i.imgur.com/5cyqjqa.png)
 
 It's worth noting here that Burpsuite will not, by default, intercept any external Javascript files that the web page is loading. If you need to edit a script which is not inside the main page being loaded, you'll need to go to the "Options" tab at the top of the Burpsuite window, then under the "Intercept Client Requests" section, edit the condition of the first line to remove `^js$|`:
 
-!https://i.imgur.com/95hi6pX.png
+![up](https://i.imgur.com/95hi6pX.png)
 
 ---
 
@@ -201,19 +201,19 @@ We've already bypassed this filter by intercepting and removing it prior to the 
 
 Having reloaded the webpage to put the filter back in place, let's take the reverse shell that we used before and rename it to be called "shell.jpg". As the MIME type (based on the file extension) automatically checks out, the Client-Side filter lets our payload through without complaining:
 
-!https://i.imgur.com/WNpruFM.png
+![up](https://i.imgur.com/WNpruFM.png)
 
 Once again we'll activate our Burpsuite intercept, then click "Upload" and catch the request:
 
-!https://i.imgur.com/h2164Li.png
+![op](https://i.imgur.com/h2164Li.png)
 
 Observe that the MIME type of our PHP shell is currently `image/jpeg`. We'll change this to `text/x-php`, and the file extension from `.jpg` to `.php`, then forward the request to the server:
 
-!https://i.imgur.com/sqmwssT.png
+![iop](https://i.imgur.com/sqmwssT.png)
 
 Now, when we navigate to **`http://demo.uploadvulns.thm/uploads/shell.php` hav**ing set up a **netcat** listener, we receive a connection from the shell!
 
-!https://i.imgur.com/cUqNO2L.png
+![uiop](https://i.imgur.com/cUqNO2L.png)
 
 ---
 
@@ -246,27 +246,27 @@ In this instance, the code is looking for the last period (`.`) in the file name
 
 We can see that the code is filtering out the `.php` and `.phtml` extensions, so if we want to upload a PHP script we're going to have to find another extension. **The [wikipedia page](https://en.wikipedia.org/wiki/PHP) for PHP gives us a few common extensions that we can try; however, there are actually a variety of other more rarely used extensions available that webservers may nonetheless still recognise. These include: `.php3`, `.php4`, `.php5`, `.php7`, `.phps`, `.php-s`, `.pht` and `.phar`. Many of these bypass the filter (which only blocks`.php` and `.phtml`), but it appears that the server is configured not to recognize them as PHP files, as in the below example:**
 
-!https://i.imgur.com/yzOGVob.png
+![tyuiop](https://i.imgur.com/yzOGVob.png)
 
 This is actually the default for Apache2 servers, at the time of writing; however, the sysadmin may have changed the default configuration (or the server may be out of date), so it's well worth trying.
 
 Eventually we find that the `.phar` extension bypasses the filter -- and works -- thus giving us our shell:
 
-!https://i.imgur.com/Aigaz4R.png
+![op](https://i.imgur.com/Aigaz4R.png)
 
 ---
 
 Let's have a look at another example, with a different filter. This time we'll do it completely black-box: i.e. without the source code.Once again, we have our upload form:
 
-!https://i.imgur.com/STsI51E.png
+![iop](https://i.imgur.com/STsI51E.png)
 
 Ok, we'll start by scoping this out with a completely legitimate upload. Let's try uploading the `spaniel.jpg` image from before:
 
-!https://i.imgur.com/tp6T2WH.png
+![uiop](https://i.imgur.com/tp6T2WH.png)
 
 Well, that tells us that JPEGS are accepted at least. Let's go for one that we can be pretty sure will be rejected (`shell.php`):
 
-!https://i.imgur.com/hk4inJ2.png
+![vbn](https://i.imgur.com/hk4inJ2.png)
 
 Can't say that was unexpected.
 
@@ -292,11 +292,11 @@ Pseudocode for this kind of filter may look something like this:
 
 When we try to upload our file we get a success message. Navigating to the `/uploads` directory confirms that the payload was successfully uploaded:
 
-!https://i.imgur.com/K55eu9o.png
+![vbn](https://i.imgur.com/K55eu9o.png)
 
 Activating it, we receive our shell:
 
-!https://i.imgur.com/VVAKZfw.png
+![axx](https://i.imgur.com/VVAKZfw.png)
 
 ---
 
@@ -313,7 +313,7 @@ to validate file uploads, simply by reading those first few bytes and comparing 
 
 Let's take a look at an example. As per usual, we have an upload page:
 
-!https://i.imgur.com/yQnQGsn.png
+![up](https://i.imgur.com/yQnQGsn.png)
 
 As expected, if we upload our standard shell.php file, we get an error; however, if we upload a JPEG, the website is fine with it. All running as per expected so far.
 
@@ -322,34 +322,34 @@ It shouldn't matter which we use here, so let's just pick one **(`FF D8 FF DB`)*
 
 Before we get started, let's use the Linux `file` command to check the file type of our shell:
 
-!https://i.imgur.com/2126EHS.png
+![mmm](https://i.imgur.com/2126EHS.png)
 
 As expected, the command tells us that the filetype is PHP. Keep this in mind as we proceed with the explanation.
 
 We can see that the magic number we've chosen is four bytes long, so let's open up the reverse shell script and add four random characters on the first line. These characters do not matter, so for this example we'll 
 just use four "A"s:
 
-(!https://i.imgur.com/oe434wu.png)
+![up](https://i.imgur.com/oe434wu.png)
 
 Save the file and exit. Next we're going to reopen the file in `hexeditor`(which comes by default on Kali), or any other tool which allows you to see and edit the shell as hex. In hexeditor the file looks like this:
 
-!https://i.imgur.com/otIyN96.png
+![and](https://i.imgur.com/otIyN96.png)
 
 Note the four bytes in the red box: they are all `41`, which is the hex code for a capital "A" -- exactly what we added at the top of the file previously.
 
 Change this to the magic number we found earlier for JPEG files: `FF D8 FF DB`
 
-!https://i.imgur.com/2OlGKdQ.png
+![op](https://i.imgur.com/2OlGKdQ.png)
 
 Now if we save and exit the file (Ctrl + x), we can use
 
 once again, and see that we have successfully spoofed the filetype of our shell:
 
-!https://i.imgur.com/ldyt88v.png
+![DD](https://i.imgur.com/ldyt88v.png)
 
 Perfect. Now let's try uploading the modified shell and see if it bypasses the filter!
 
-!https://i.imgur.com/Coat5LI.png
+![sss](https://i.imgur.com/Coat5LI.png)
 
 There we have it -- we bypassed the server-side magic number filter and received a reverse shell.
 
