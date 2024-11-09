@@ -1,6 +1,10 @@
 # **Upload Vulnerabilities**
 
----
+<br>
+<p align="center">
+  <b><a href="https://n4inj4.github.io/File-Upload-Vulnerabilities/">Live Preview Link🔗</a></b>
+</p>
+<br>  
 
 ### **Introduction**
 
