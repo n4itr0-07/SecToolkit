@@ -77,19 +77,81 @@ This repository features a variety of topics that cater to diverse cybersecurity
 The repository is organized into folders, each focusing on a specific topic for easy navigation:  
 
 ```
-├── Bug Bounty Roadmap  
-├── Command Injection  
-├── Computer Networking  
-├── Core Principles of Cyber Security  
-├── Cyber Security Roadmap  
-├── Cryptography  
-├── HTML Injection  
-├── IDOR Guide and Exploitation  
-├── Kali Linux Commands and Shortcuts  
-├── Mastering HTTP Status Codes  
-├── OWASP Top 10  
-├── Python Libraries for Cyber Security  
-└── Understanding Parameters in Web Applications  
+Directory structure:
+└── n4itr0-07-SecToolkit/
+    ├── README.md
+    ├── LICENSE
+    ├── Bash Projects/
+    │   └── Readme.md
+    ├── Bug Bounty Roadmap/
+    │   └── README.md
+    ├── Bug Bounty Roadmap TT/
+    │   └── README.md
+    ├── Bug-Bounty-Hunting-Methodology-2025/
+    │   └── README.md
+    ├── Command Injections/
+    │   └── README.md
+    ├── Command Prompt Vs Windows Terminal/
+    │   └── Readme.md
+    ├── Common Ports/
+    │   └── README.md
+    ├── Computer Networking/
+    │   ├── README.md
+    │   └── Computer_Networking_Explanation.md
+    ├── Core Principles Of Cyber Security/
+    │   └── README.md
+    ├── Cryptography/
+    │   └── What_is_Cryptography.md
+    ├── Cyber Security Roadmap/
+    │   ├── README.md
+    │   ├── Common_Networking_Protocols_Overview.md
+    │   ├── Cybersecurity_Basics_and_Types_of_Cyber_Attacks.md
+    │   ├── Firewalls&Vpn's.md
+    │   ├── HTTP_Request_Smuggling_Deep_Dive_Notes.md
+    │   ├── OSI_and_TCP_IP_Models_Explained.md
+    │   └── Subnetting_and_IP_Addressing_Overview.md
+    ├── File Upload Vulnerabilities/
+    │   └── README.md
+    ├── Fuzzing - The Ultimate Giude/
+    │   └── README.md
+    ├── HTML Injection/
+    │   └── README.md
+    ├── HTTP Request Smuggling/
+    │   └── README.md
+    ├── IDOR-Guide and Exploitation/
+    │   └── README.md
+    ├── Kali Linux Commands & Shortcuts/
+    │   ├── README.md
+    │   └── Kali Linux Shortcuts.md
+    ├── Mastering HTTP Status Codes/
+    │   └── README.md
+    ├── Metasploit Mastery Complete Framework Cheat Sheet/
+    │   └── README.md
+    ├── MySQL Injection Documentation/
+    │   └── README.md
+    ├── NSE & Lua Guide/
+    │   └── README.md
+    ├── Netcat Tutorial From Basics to Advanced/
+    │   └── README.md
+    ├── OWASP TOP 10/
+    │   └── README.md
+    ├── Open Redirect/
+    │   └── README.md
+    ├── Port_Guide_Reference/
+    │   └── README.md
+    ├── Python Libraries For Cyber Security/
+    │   └── README.md
+    ├── Sessions & Cookies/
+    │   └── README.md
+    ├── Understanding Parameters/
+    │   └── README.md
+    ├── Vulnerability-Taxonomy/
+    │   └── README.md
+    ├── What Is IP Address/
+    │   └── README.md
+    └── curl-grep-guide/
+        └── README.md
+ 
 ```
 
 Each folder contains:  
