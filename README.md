@@ -8,6 +8,8 @@
 
 Welcome to **SecToolkit**, a one-stop repository for cybersecurity enthusiasts and professionals looking to sharpen their skills in **bug bounty hunting**, **penetration testing**, and **web application security**. 🚀  
 
+**⚠️ AI Help Are Taken During Making All This Content**
+
 Whether you’re a **beginner** starting your journey or a **pro** looking to master advanced concepts, this repository offers a treasure trove of curated resources, hands-on examples, and techniques to tackle modern security challenges. 💡  
 
 ### ✨ Why SecToolkit?  
