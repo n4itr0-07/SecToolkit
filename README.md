@@ -161,19 +161,6 @@ Each folder contains:
 - 🛠️ Code snippets and examples.  
 - 🔗 Additional references for further reading.
 
----
-
-## 🚀 Getting Started  
-
-Before diving into the resources, ensure you’re familiar with:  
-- Basic **Linux commands**, especially in Kali Linux.  
-- **Python scripting** for automating security tools and exploits.  
-- Knowledge of **web technologies** like HTML, JavaScript, and HTTP.  
-
-### Prerequisites  
-- A basic understanding of cybersecurity concepts.  
-- Tools like **Burp Suite**, **ffuf**, or **Nmap** installed on your system.  
-- A hands-on mindset ready to explore and experiment. 🧪  
 
 ---
 
