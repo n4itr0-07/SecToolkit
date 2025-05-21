@@ -1,8 +1,6 @@
 # 🛠️ SecToolkit  
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)  
-![Stars](https://img.shields.io/github/stars/n4itr0-07/SecToolkit?style=social)  
-![Issues](https://img.shields.io/github/issues/n4itr0-07/SecToolkit)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)  ![Stars](https://img.shields.io/github/stars/n4itr0-07/SecToolkit?style=social)  ![Issues](https://img.shields.io/github/issues/n4itr0-07/SecToolkit)
 
 ## 📌 Overview  
 
