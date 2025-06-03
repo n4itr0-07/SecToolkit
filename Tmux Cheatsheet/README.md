@@ -30,6 +30,30 @@ Session → Windows → Panes
 • Pane = split areas inside a window
 
 ````
+```yaml
++------------------------------------------+
+| Session 1                                |
+| +---------------------+----------------+ |
+| | Window 1 (Attack)   | Window 2 (Tools)| |
+| |                     |                | |
+| | +-------+---------+ | +--------------+ |
+| | | Pane A | Pane B | | |   Pane D     | |
+| | |       |         | | |              | |
+| | +-------+---------+ | +--------------+ |
+| | | Pane C          | |                | |
+| | |                 | |                | |
+| | +-----------------+ |                | |
+| +---------------------+----------------+ |
++------------------------------------------+
+```
+---
+
+### **Basic Installation (Very brief):** You could add a tiny section on how to install Tmux on common OS. It's usually a one-liner.
+
+- `sudo apt install tmux` (Debian/Ubuntu)
+- `sudo pacman -S tmux` (Arch)
+- `brew install tmux` (macOS)
+- `choco install tmux` (Windows via Chocolatey)
 
 ---
 
